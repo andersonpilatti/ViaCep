@@ -8,7 +8,11 @@ app.controller('MainCtrl', ['ViaCEP', function(ViaCEP) {
         ViaCEP.Buscar(self.usr.cep).then(function(result){
             var data = result.data;
 
+            self.usr.cep = data.cep;
             self.usr.logradouro = data.logradouro;
+            self.usr.bairro = data.bairro;
+            self.usr.localidade = data.localidade;
+            self.usr.uf = data.uf;
         });
     };
 }]);

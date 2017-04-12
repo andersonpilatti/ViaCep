@@ -1,0 +1,88 @@
+<html ng-app="myApp">
+    <head>
+    <title>Cadastro</title>
+        <style>
+            .done {
+            background-color: green;
+            }
+            .pending {
+            background-color: red;
+            }
+        </style>
+    </head>
+
+    <body ng-controller="MainCtrl as ctrl">
+        <h1>Cadastro</h1>
+
+        <hr />
+        <table>
+            <tr>
+                <td>
+                    <h2>Residencial</h2>
+                    <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="Email">CEP</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text" ng-model="ctrl.usr.cep" ng-blur="BuscarCEP()" />
+                    </div>
+                </div>
+                        
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="logradouro">Logradouro</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text" ng-model="ctrl.usr.logradouro" />
+                    </div>
+                </div>
+
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="numero">Numero</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text"  ng-model="ctrl.usr.numero" />
+                    </div>
+                </div>
+
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="complemento">Complemento</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text"  ng-model="ctrl.usr.complemento" />
+                    </div>
+                </div>
+
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="bairro">Bairro</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text"  ng-model="ctrl.usr.bairro" />
+                    </div>
+                </div>
+
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="localidade">Localidade</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text"  ng-model="ctrl.usr.localidade" />
+                    </div>
+                </div>
+
+                <div class="clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label no-padding-right" for="uf">UF</label>
+
+                    <div class="input-group">
+                        <input class="col-xs-12" value="" type="text"  ng-model="ctrl.usr.uf" />
+                    </div>
+                </div>
+                </td>
+            </tr>
+        </table>
+        
+        <button ng-click="ctrl.Teste()">Teste</button>
+
+        <hr />
+
+        <script type="text/javascript" src="angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
